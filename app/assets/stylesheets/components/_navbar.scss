@@ -10,3 +10,34 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.nav-item {
+  display: flex;
+}
+
+.nav-link-new {
+  text-decoration: none;
+  color: rgba($color: #000000, $alpha: 0.8);
+  margin-right: 50px;
+}
+
+.nav-link-new:hover {
+  color: #000000;
+}
+
+.nav-item a::after
+{
+    content: '';
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    transition: width .3s;
+}
+
+.nav-item a:hover::after
+{
+  width: 50%;
+  transition: width .3s;
+}
