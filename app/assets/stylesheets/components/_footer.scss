@@ -1,0 +1,94 @@
+/* Footer - Content */
+
+.container-footer
+{
+  margin-left: 100px;
+  font-size: 0;
+}
+
+
+
+.section-community, .section-about, .section-assistance
+{
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.section-community h3, .section-about h3, .section-assistance h3
+{
+  padding: 25px 0px;
+  font-size: 24px;
+}
+
+.section-community ul, .section-about ul, .section-assistance ul
+{
+  padding-left: 0px;
+}
+
+.section-community ul li, .section-about ul li, .section-assistance ul li
+{
+  list-style: none;
+}
+
+.section-about ul
+{
+  padding-left: 0px;
+  padding-bottom: 50px;
+}
+
+.section-assistance
+{
+  padding-bottom: 50px;
+}
+
+.section-assistance li a
+{
+  color: #000000;
+  text-decoration: none;
+}
+
+.section-assistance li a::after
+{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    transition: width .3s;
+}
+
+.section-assistance li a:hover::after
+{
+  width: 43%;
+  transition: width .3s;
+}
+
+/* Footer - line */
+
+hr {
+  display: block;
+  width: 90vw;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #a0a0a0;
+  margin: 1em auto;
+  padding: 0;
+}
+
+/* Footer - Copyright */
+
+.footer-bottom {
+  width: 100%;
+  margin-left: 100px;
+  padding: 20px 0;
+}
+
+.footer-bottom p {
+  margin-bottom: 0;
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
