@@ -1,0 +1,12 @@
+
+<div class="container">
+  <h1>INDEX#motos</h1>
+
+   <% @motos.each do |moto| %>
+   <div>
+      <%= moto.name %> | <%= moto.price %> | <%= moto.power %>
+   </div>
+    <% end %>
+
+  <%= link_to "Home", root_path  %>
+</div>
