@@ -1,2 +1,14 @@
-<h1> New Page </h1>
-<%= link_to "Home", root_path  %>
+<div class="container">
+  <h1> New Page </h1>
+  <% simple_form_for(@moto) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :brand %>
+  <%= f.input :address %>
+  <%= f.input :power %>
+  <%= f.input :kilometers %>
+  <%# <%= f.input :price %>
+  <%= f.submit "Create your Moto", class: "btn btn-primary" %> %>
+  <% end %>
+
+  <%= link_to "Home", root_path  %>
+</div>

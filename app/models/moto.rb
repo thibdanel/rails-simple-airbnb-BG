@@ -7,4 +7,5 @@ class Moto < ApplicationRecord
   validates :available, presence: true
   validates :power, presence: true
   validates :kilometers, presence: true
+  validates :price, presence: true
 end
