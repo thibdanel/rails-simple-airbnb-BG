@@ -7,6 +7,9 @@ class MotosController < ApplicationController
     @motos = Moto.all
   end
 
+  def show
+  end
+
   def create
     @moto = Moto.new(moto_params)
     if @moto.save
