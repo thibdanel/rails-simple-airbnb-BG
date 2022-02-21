@@ -3,8 +3,9 @@
 <div class="container">
   <h1>Show Moto</h1>
 
-
-
+    <% @motos.each do |moto| %>
+      <%= moto.name %> | <%= moto.price %> | <%= moto.power %>
+    <% end %>
 
   <%= link_to "Home", root_path  %>
 </div>
