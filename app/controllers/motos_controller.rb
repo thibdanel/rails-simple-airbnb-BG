@@ -1,11 +1,11 @@
 class MotosController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def new
     @moto = Moto.new
   end
 
   def index
     @motos = Moto.all
-
   end
 
   def show
