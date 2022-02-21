@@ -1,9 +1,24 @@
+<div class="banner mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.motoservices.com/media/cache/home_slider_lg/media/gallery/18511/CFMOTO-700-CL-X-SPORT_2022-46.jpg);">
+  <div class="container">
+    <h1><%= @moto.brand %> <strong><%= @moto.power %> Chevaux</strong> !</h1>
+  </div>
+</div>
 
 
 <div class="container">
-  <h1>Show Moto</h1>
-
-    <%= @moto.name %> | <%= @moto.price %> | <%= @moto.power %>
-
-  <%= link_to "Home", root_path  %>
+  <div class="card-trip">
+    <img src="https://media.motoservices.com/media/cache/home_slider_lg/media/gallery/18511/CFMOTO-700-CL-X-SPORT_2022-46.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= @moto.brand %> </h2>
+        <p><%= @moto.power %> Horsepower</p>
+        <p><%= @moto.kilometers %> Km</p>
+        <p><%= @moto.address %> Lille</p>
+      </div>
+      <div class="btn btn-primary">
+        Reserve This Bike
+      </div>
+      <h2 class="card-trip-pricing"><%= @moto.price %>€</h2>
+    </div>
+  </div>
 </div>
