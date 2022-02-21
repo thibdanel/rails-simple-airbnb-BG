@@ -5,6 +5,7 @@ class MotosController < ApplicationController
 
   def index
     @motos = Moto.all
+
   end
 
   def show
@@ -13,9 +14,8 @@ class MotosController < ApplicationController
 
   def create
     @moto = Moto.new(moto_params)
-    @moto.user = current_user
+    @moto.user_id = current_user.id
     if @moto.save!
-      raise
       redirect_to root_path
     else
       render :new
@@ -34,6 +34,6 @@ class MotosController < ApplicationController
   private
 
   def moto_params
-    params.require(:moto).permit(:name, :brand, :address, :price, :available, :power, :kilometers)
+    params.require(:moto).permit(:name, :brand, :address, :price, :available, :power, :kilometers, :user_id)
   end
 end
