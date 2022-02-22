@@ -19,7 +19,7 @@
         Reserve This Bike Now
       </div>
       <div class="btn btn-danger">
-        <%= link_to "Delete this Bike", @moto.destroy %>
+        <%= link_to "Delete this Bike", moto_path(@moto), method: :delete%>
       </div>
 
       <h2 class="card-trip-pricing"><%= @moto.price %>€</h2>
