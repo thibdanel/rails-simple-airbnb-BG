@@ -15,8 +15,8 @@
         <p><%= @moto.kilometers %> Km</p>
         <p><%= @moto.address %> Lille</p>
       </div>
-      <div class="btn btn-primary">
-        Reserve This Bike Now
+      <div class="btn btn-danger">
+        <%= link_to "Reserve bike now", new_moto_booking_path(@moto) %>
       </div>
       <div class="btn btn-danger">
         <%= link_to "Delete this Bike", moto_path(@moto), method: :delete %>
