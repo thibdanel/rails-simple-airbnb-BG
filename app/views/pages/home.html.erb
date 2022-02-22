@@ -1,5 +1,5 @@
 <div class="banner-homepage">
-  <h1></h1>
+  <h1>Airmoto</h1>
 </div>
 
 
@@ -9,7 +9,7 @@
     <% @motos.take(3).each do |moto| %>
       <div class="col-4">
         <div class="card-moto">
-          <img src="https://media.motoservices.com/media/cache/home_slider_lg/media/gallery/18511/CFMOTO-700-CL-X-SPORT_2022-46.jpg" />
+          <%= cl_image_tag moto.photo.key, height: 300, width: 400, crop: :fill%>
           <div class="card-moto-info">
             <p> <%= link_to moto.name, moto_path(moto), :class => "name" %> </p>
             <p id="brand"> <%= moto.brand %> </p>

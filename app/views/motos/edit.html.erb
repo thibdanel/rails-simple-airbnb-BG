@@ -1,0 +1,21 @@
+<div class="banner mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.yamaha-motor.eu/content/dam/fr-assets/t%C3%A9n%C3%A9r%C3%A9-700-center/trail-rando/2019_Trail_Rando_Diagonale_Tenere_700_245.jpg/_jcr_content/renditions/cq5dam.web.2000.2000.jpeg);">
+  <div class="container">
+  </div>
+</div>
+
+<div class="container">
+  <h1> Update your dear <%= @moto.brand%></h1>
+  <%= simple_form_for(@moto) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :brand %>
+  <%= f.input :address %>
+  <%= f.input :power %>
+  <%= f.input :kilometers %>
+  <%= f.input :price %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Update", class: "new-moto mt-3" %>
+  <% end %>
+
+  <hr>
+  <%= link_to "Home", root_path, class: "btn btn-primary"  %>
+</div>

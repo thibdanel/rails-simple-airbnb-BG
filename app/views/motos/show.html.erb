@@ -1,4 +1,4 @@
-<div class="banner mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.motoservices.com/media/cache/home_slider_lg/media/gallery/18511/CFMOTO-700-CL-X-SPORT_2022-46.jpg);">
+<div class="banner mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.yamaha-motor.eu/content/dam/fr-assets/t%C3%A9n%C3%A9r%C3%A9-700-center/trail-rando/2019_Trail_Rando_Diagonale_Tenere_700_245.jpg/_jcr_content/renditions/cq5dam.web.2000.2000.jpeg);">
   <div class="container">
     <h1><%= @moto.brand %> <strong><%= @moto.power %> Chevaux</strong> !</h1>
   </div>
@@ -7,13 +7,13 @@
 
 <div class="container">
   <div class="card-trip">
-    <img src="https://media.motoservices.com/media/cache/home_slider_lg/media/gallery/18511/CFMOTO-700-CL-X-SPORT_2022-46.jpg" />
+    <%= cl_image_tag @moto.photo.key, height: 300, width: 400, crop: :fill%>
     <div class="card-trip-infos">
       <div>
         <h2><%= @moto.brand %> </h2>
         <p><%= @moto.power %> Horsepower</p>
         <p><%= @moto.kilometers %> Km</p>
-        <p><%= @moto.address %> Lille</p>
+        <p>Location: <%= @moto.address %></p>
       </div>
       <div class="btn btn-danger">
         <%= link_to "Reserve bike now", new_moto_booking_path(@moto) %>
@@ -22,7 +22,7 @@
         <%= link_to "Delete this Bike", moto_path(@moto), method: :delete %>
       </div>
        <div class="btn btn-secondary">
-        <%= link_to "Update Bike" %>
+        <%= link_to "Update Bike", edit_moto_path(@moto) %>
       </div>
 
       <h2 class="card-trip-pricing"><%= @moto.price %>€</h2>
