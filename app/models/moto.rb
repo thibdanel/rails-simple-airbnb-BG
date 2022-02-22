@@ -1,6 +1,7 @@
 class Moto < ApplicationRecord
   belongs_to :user
-  has_many :reviews
+  has_many :bookings
+
   validates :name, presence: true
   validates :brand, presence: true
   validates :address, presence: true
