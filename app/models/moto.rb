@@ -7,4 +7,5 @@ class Moto < ApplicationRecord
   validates :power, presence: true
   validates :kilometers, presence: true
   validates :price, presence: true
+  has_one_attached :photo
 end

@@ -10,7 +10,7 @@
       <% @motos.each do |moto| %>
       <div class="col-12">
         <div class="card-product mt-3">
-          <img src="https://moto-station.com/wp-content/uploads/2021/01/31/KTM-action.jpg" />
+           <%= cl_image_tag moto.photo.key, height: 300, width: 400, crop: :fill%>
             <div class="card-product-infos">
             <%= link_to moto_path(moto) do %>
             <h2> <%= moto.name %> </h2>
@@ -20,9 +20,10 @@
             <p><strong>for only</strong> <%= moto.price %> €</p>
             </div>
           </div>
-          <hr>
+          <hr class="hr">
         <% end %>
-      <%= link_to "Home", root_path, class: 'btn btn-primary' %>
+      <%= link_to "Create a moto", new_moto_path, class: "new-moto mt-3"  %>
+      <%= link_to "Home", root_path, class: 'new-moto mt-3' %>
     </div>
   </div>
 </div>
