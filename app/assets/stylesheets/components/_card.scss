@@ -119,7 +119,7 @@
   filter:brightness(60%);
 }
 
-// Card moto : Info
+// Card moto : Info ON Home
 
 .card-moto .card-moto-info {
   height: 40%;
@@ -163,5 +163,63 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
 
+// Card moto : info ON Dashboard
+
+.card-moto .card-moto-img {
+  position: relative;
+}
+
+.card-moto .card-moto-img img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+  filter:brightness(100%);
+}
+
+.card-moto .card-moto-img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.card-moto i {
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+  color: #FFFFFF;
+  transition: 0.1s;
+  transform: scale(1);
+}
+
+
+.card-moto i:hover {
+  transition: 0.3s;
+  transform: scale(1.25);
+}
+
+
+
+.card-moto .fa-trash {
+  top: 15px;
+  right: 15px;
+}
+
+.card-moto .fa-pen {
+  top: 15px;
+  right: 45px;
+}
+
+.card-moto .card-moto-img:hover img {
+  transition: 0.3s;
+  filter:brightness(60%);
+}
+
+.card-moto .card-moto-img:hover i {
+  visibility: visible;
 }

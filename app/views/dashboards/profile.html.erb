@@ -5,35 +5,39 @@
     <%= link_to "Enter in the garage!", motos_path , class: "btn btn-ghost" %>
     </div>
   </div>
+</div>
 
+<div class="container mt-5">
   <h2>Booking HISTORY</h2>
-  <% @motos.each do |moto| %>
-    <div class="row mt-4">
+  <div class="row mt-4">
+    <% @motos.each do |moto| %>
       <% moto.bookings.each do |booking| %>
         <div class="col-4">
-          <div class="card-category">
-            <div class="card-product-img">
+          <div class="card-moto">
+            <div class="card-moto-img">
               <%= cl_image_tag moto.photo.key, height: 300, width: 400, crop: :fill%>
               <i class="fas fa-trash"></i>
               <i class="fas fa-pen"></i>
             </div>
-            <div class="card-product-info">
-              <h2> <%= booking.start_date %> </h2>
-              <p> <%= booking.end_date %> </p>
+            <div class="card-moto-info">
+              <p id="start-date" > <%= booking.start_date %> </p>
+              <p id="end-date" > <%= booking.end_date %> </p>
             </div>
           </div>
         </div>
       <% end %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
+</div>
 
+<div class="container mt-5">
   <h2>Mes MOTOS</h2>
 
   <div class="row">
     <% @motos.each do |moto| %>
 
-      <div class="card-trip">
-        <%= cl_image_tag moto.photo.key, height: 300, width: 400, crop: :fill%>
+      <div class="card-trip mt-5">
+        <%= cl_image_tag moto.photo.key, crop: :fill%>
 
         <div class="card-trip-infos">
           <div>
@@ -47,6 +51,4 @@
       </div>
     <% end  %>
   </div>
-
-
 </div>
