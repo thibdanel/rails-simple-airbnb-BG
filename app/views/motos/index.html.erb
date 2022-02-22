@@ -4,22 +4,25 @@
   </div>
 </div>
 
-
 <div class="container">
-  <h1>Find your bike for the next 24 hours or more!</h1>
-
+  <h2>Find your bike for the next 24 hours or more!</h2>
   <div class="row">
-    <% @motos.each do |moto| %>
-      <div class ="card-trip">
-        <div class="card-trip-infos">
-          <img src="#" />
-          <%= link_to moto_path(moto) do %>
-          <%= moto.name %> | <%= moto.price %> | <%= moto.power %>
-          <% end %>
-        </div>
-      </div>
-      <% end %>
+      <% @motos.each do |moto| %>
+      <div class="col-12">
+        <div class="card-product mt-3">
+          <img src="https://moto-station.com/wp-content/uploads/2021/01/31/KTM-action.jpg" />
+            <div class="card-product-infos">
+            <%= link_to moto_path(moto) do %>
+            <h2> <%= moto.name %> </h2>
+            <% end %>
+            <p>Moto power: <%= moto.power %>CC</p>
+            <p>kilometers: <%= moto.kilometers %> Kms</p>
+            <p><strong>for only</strong> <%= moto.price %> €</p>
+            </div>
+          </div>
+          <hr>
+        <% end %>
+      <%= link_to "Home", root_path  %>
     </div>
-    <%= link_to "Home", root_path  %>
   </div>
 </div>
