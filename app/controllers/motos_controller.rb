@@ -16,19 +16,26 @@ class MotosController < ApplicationController
     @moto = Moto.new(moto_params)
     @moto.user_id = current_user.id
     if @moto.save!
-      redirect_to root_path
+      redirect_to motos_path
     else
       render :new
     end
   end
 
   def edit
+    @moto = Moto.find(params[:id])
   end
 
   def update
+    @moto = Moto.find(params[:id])
+    @moto.update(moto_params)
+    redirect_to moto_path(moto)
   end
 
   def destroy
+    @moto = Moto.find(params[:id])
+    @moto.destroy
+    redirect_to motos_path
   end
 
   private
