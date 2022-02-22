@@ -1,20 +1,30 @@
-<div class="container">
-  <img src="" alt="">
+<div class="banner-homepage">
+  <h1></h1>
 </div>
 
-<p> <%= link_to 'New moto', new_moto_path %> </p>
 
-<div class="container">
+<div class="container mt-5">
+  <h2>Offers for your next trip</h2>
   <div class="row mt-4">
+    <% @motos.take(3).each do |moto| %>
+      <div class="col-4">
+        <div class="card-moto">
+          <img src="https://media.motoservices.com/media/cache/home_slider_lg/media/gallery/18511/CFMOTO-700-CL-X-SPORT_2022-46.jpg" />
+          <div class="card-moto-info">
+            <p> <%= link_to moto.name, moto_path(moto), :class => "name" %> </p>
+            <p id="brand"> <%= moto.brand %> </p>
+            <p id="address"> <%= moto.address %> </p>
+            <p id="price"> <%= moto.price%> €</p>
+          </div>
+
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
 
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container mt-5">
+  <p> <%= link_to 'New moto', new_moto_path, :class => "new-moto" %> </p>
+</div>
 
-  <%# <% @motos.each do |moto| %>
-    <%# <div class="col-4 mt-5">
-      <div class="card-list">
-        <p> <%= link_to moto.name, moto_path(moto), :class => "link_to" %>
-      <%# </div>
-    </div>
-  <% end %>
+<%# <p>Find me in app/views/pages/home.html.erb</p> %>
