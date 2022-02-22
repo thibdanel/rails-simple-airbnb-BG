@@ -7,7 +7,7 @@
 
 <div class="container">
   <div class="card-trip">
-    <img src="https://media.motoservices.com/media/cache/home_slider_lg/media/gallery/18511/CFMOTO-700-CL-X-SPORT_2022-46.jpg" />
+    <%= cl_image_tag @moto.photo.key, height: 300, width: 400, crop: :fill%>
     <div class="card-trip-infos">
       <div>
         <h2><%= @moto.brand %> </h2>
