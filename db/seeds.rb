@@ -23,6 +23,7 @@
 
 require "open-uri"
 puts 'destroy all users and motos'
+Booking.destroy_all
 User.destroy_all
 Moto.destroy_all
 puts 'clean'

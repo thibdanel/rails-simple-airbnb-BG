@@ -7,30 +7,46 @@
   </div>
 
   <h2>Booking HISTORY</h2>
-  <div class="card-product mt-3">
-    <img src="https://assets.turbologo.com/blog/fr/2019/10/19134154/harley-davidson-logo-evolution.jpg" />
-      <div class="card-product-infos">
-        <h2>BOOKING PENDING</h2>
-        <p>Product description with <strong>relevant info</strong> only.</p>
-      </div>
-  </div>
-<hr>
-<h2>Booking HISTORY</h2>
-   <div class="card-product mt-3">
-      <img src="https://unnotremonde.com/wp-content/uploads/2017/01/liasses-de-billets.jpg" />
-      <div class="card-product-infos">
-        <h2>BOOKING HISTORY</h2>
-        <p>Product description with <strong>relevant info</strong> only.</p>
-      </div>
-  </div>
-  <hr>
+  <% @motos.each do |moto| %>
+    <div class="row mt-4">
+      <% moto.bookings.each do |booking| %>
+        <div class="col-4">
+          <div class="card-category">
+            <div class="card-product-img">
+              <%= cl_image_tag moto.photo.key, height: 300, width: 400, crop: :fill%>
+              <i class="fas fa-trash"></i>
+              <i class="fas fa-pen"></i>
+            </div>
+            <div class="card-product-info">
+              <h2> <%= booking.start_date %> </h2>
+              <p> <%= booking.end_date %> </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
   <h2>Mes MOTOS</h2>
-     <div class="card-product mt-3">
-      <img src="https://www.cdiscount.com/pdt2/6/9/0/1/1200x1200/auc4042774445690/rw/vespa-gts-102-cm-12v-rose-clair-scooter-electrique.jpg" />
-      <div class="card-product-infos">
-        <h2>MES MOTOS</h2>
-        <p>Product description with <strong>relevant info</strong> only.</p>
+
+  <div class="row">
+    <% @motos.each do |moto| %>
+
+      <div class="card-trip">
+        <%= cl_image_tag moto.photo.key, height: 300, width: 400, crop: :fill%>
+
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= moto.brand %> </h2>
+            <p><%= moto.power %> Horsepower</p>
+            <p><%= moto.kilometers %> Km</p>
+            <p>Location: <%= moto.address %></p>
+          </div>
+          <h2 class="card-trip-pricing"><%= moto.price %>€</h2>
+        </div>
       </div>
+    <% end  %>
   </div>
+
 
 </div>
