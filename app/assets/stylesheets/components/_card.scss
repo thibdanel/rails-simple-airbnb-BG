@@ -3,6 +3,7 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
 }
 
 .card-trip > img {
@@ -88,4 +89,79 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+
+// Card moto : Global
+
+.card-moto {
+  height: 450px;
+  box-shadow: 5px 15px 30px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  position: relative;
+}
+
+// Card moto : Img
+
+.card-moto img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  transition: 0.3s;
+  filter:brightness(100%);
+  border-radius: 10px 10px 0px 0px;
+}
+
+// Card moto : Img:hover
+
+.card-moto img:hover {
+  transition: 0.3s;
+  filter:brightness(60%);
+}
+
+// Card moto : Info
+
+.card-moto .card-moto-info {
+  height: 40%;
+  position: relative;
+}
+
+.card-moto .card-moto-info p {
+  padding: 0;
+  margin: 0;
+}
+
+.card-moto .name {
+  text-decoration: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-moto .name:hover {
+  opacity: 0.8;
+}
+
+
+.card-moto #brand {
+  position: absolute;
+  top: 55px;
+  left: 20px;
+  font-size: 18px;
+}
+
+.card-moto #address {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.card-moto #price {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+
 }
