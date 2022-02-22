@@ -23,7 +23,6 @@ class MotosController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
