@@ -11,12 +11,12 @@
         <div class="card-product mt-3">
            <%= cl_image_tag(moto.photo.key, height: 300, width: 400, crop: :fill)%>
             <div class="card-product-infos">
-            <%= link_to moto_path(moto) do %>
-            <h2> <%= moto.name %> </h2>
-            <% end %>
-            <p>Moto power: <%= moto.power %>CC</p>
-            <p>kilometers: <%= moto.kilometers %> Kms</p>
-            <p><strong>for only</strong> <%= moto.price %> €</p>
+              <%= link_to moto_path(moto) do %>
+              <h2> <%= moto.name %> </h2>
+              <% end %>
+              <p>Moto power: <%= moto.power %>CC</p>
+              <p>kilometers: <%= moto.kilometers %> Kms</p>
+              <p><strong>for only</strong> <%= moto.price %> €</p>
             </div>
           </div>
           <hr/>
