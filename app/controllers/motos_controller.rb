@@ -23,12 +23,16 @@ class MotosController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
   end
 
   def destroy
+    @moto = Moto.find(params[:id])
+    @moto.destroy
+    redirect_to root_path
   end
 
   private
