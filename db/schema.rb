@@ -43,6 +43,18 @@ ActiveRecord::Schema.define(version: 2022_02_22_122554) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "bookings", force: :cascade do |t|
+    t.string "status"
+    t.date "start_date"
+    t.date "end_date"
+    t.bigint "user_id", null: false
+    t.bigint "moto_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["moto_id"], name: "index_bookings_on_moto_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
   create_table "motos", force: :cascade do |t|
     t.string "name"
     t.string "brand"
@@ -73,5 +85,7 @@ ActiveRecord::Schema.define(version: 2022_02_22_122554) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "bookings", "motos"
+  add_foreign_key "bookings", "users"
   add_foreign_key "motos", "users"
 end

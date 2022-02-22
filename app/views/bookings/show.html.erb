@@ -1,0 +1,22 @@
+<h1>Show booking</h1>
+
+<div class="container"></div>
+
+<p> <%= link_to 'New booking' , new_user_booking_path(@user), :class => "btn btn-primary" %> </p>
+
+<div class="container">
+  <div class="row mt-4">
+    <% @list.bookings.each do |booking| %>
+      <div class="col-4">
+        <div class="card-category">
+          <div class="card-product-img">
+          </div>
+          <div class="card-product-info">
+            <p> <%= booking.start_date %> </p>
+            <p> <%= booking.end_date %> </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
