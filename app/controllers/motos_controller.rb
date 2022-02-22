@@ -29,7 +29,7 @@ class MotosController < ApplicationController
   def update
     @moto = Moto.find(params[:id])
     @moto.update(moto_params)
-    redirect_to moto_path(moto)
+    redirect_to moto_path(@moto)
   end
 
   def destroy
