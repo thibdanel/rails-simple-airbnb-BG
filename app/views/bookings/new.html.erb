@@ -10,6 +10,6 @@
   <%= simple_form_for([@moto, @booking]) do |f|%>
     <%= f.input :start_date %>
     <%= f.input :end_date %>
-    <%= f.submit %>
+    <%= f.submit "Create a Booking", class: "new-moto"%>
   <% end %>
 </div>

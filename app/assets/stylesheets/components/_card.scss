@@ -7,20 +7,26 @@
 }
 
 .card-trip > img {
-  height: 300px;
+  height: 600px;
   width: 100%;
   object-fit: cover;
 }
 
 
 .card-trip h2 {
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip h3 {
+  font-size: 25px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-trip p {
-  font-size: 12px;
+  font-size: 14px;
   opacity: .7;
   margin: 0;
 }
