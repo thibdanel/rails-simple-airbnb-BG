@@ -165,27 +165,25 @@
   right: 20px;
 }
 
-// Card moto : info ON Dashboard
+////////////////////////////////////////////////////////////////////////////////
+// Card moto : Info ON Dashboard
+////////////////////////////////////////////////////////////////////////////////
 
 .card-moto .card-moto-img {
   position: relative;
+  border-radius: 10 10px 0px 0px;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  transition: 0.3s;
 }
-
 .card-moto .card-moto-img img {
-  border-radius: 10px;
+  border-radius: 10 10px 0px 0px;
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: 0.3s;
   filter:brightness(100%);
-}
-
-.card-moto .card-moto-img {
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.3s;
 }
 
 .card-moto i {
@@ -202,7 +200,6 @@
   transition: 0.3s;
   transform: scale(1.25);
 }
-
 
 .card-moto .fa-trash {
   top: 15px;
@@ -222,6 +219,20 @@
 .card-moto .card-moto-img:hover i {
   visibility: visible;
 }
+
+.card-moto .card-moto-info #start-date {
+  position: absolute;
+  top: 30px;
+  left: 77.5px;
+}
+
+.card-moto .card-moto-info #end-date {
+  position: absolute;
+  top: 30px;
+  right: 77.5px;
+}
+
+////////////////////////////////////////////////////////////////////////////////
 
 #card-price{
   font-size: 16px;
