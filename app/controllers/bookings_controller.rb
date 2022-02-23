@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
     @moto = Moto.find(params[:moto_id])
     @booking.moto = @moto
     @booking.user_id = current_user.id
-    if @booking.save
+    if @booking.save!
       redirect_to profile_path
     else
       render :new
@@ -28,7 +28,17 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to @booking.user
+    redirect_to profile_path
+  end
+
+  def edit
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+    redirect_to profile_path
   end
 
   private
