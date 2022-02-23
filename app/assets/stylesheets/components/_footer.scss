@@ -1,4 +1,4 @@
-/* Footer - Content */
+// Footer - Content
 
 footer {
   background-color: #F7F7F7;
@@ -37,10 +37,60 @@ footer {
   list-style: none;
 }
 
+// Section : Community
+
+.section-community li a
+{
+  color: #000000;
+  text-decoration: none;
+}
+
+.section-community li a::after
+{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    transition: width .3s;
+}
+
+.section-community li a:hover::after
+{
+  width: 6%;
+  transition: width .3s;
+}
+
+// Section : About
+
 .section-about ul
 {
   padding-left: 0px;
 }
+
+.section-about li a
+{
+  color: #000000;
+  text-decoration: none;
+}
+
+.section-about li a::after
+{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000000;
+  transition: width .3s;
+}
+
+.section-about li a:hover::after
+{
+  width: 41%;
+  transition: width .3s;
+}
+
+// Section : Support
 
 .section-support li a
 {
@@ -64,7 +114,7 @@ footer {
   transition: width .3s;
 }
 
-/* Footer - line */
+// Footer - line
 
 hr {
   display: block;
@@ -76,7 +126,7 @@ hr {
   padding: 0;
 }
 
-/* Footer - Copyright */
+// Footer - Copyright
 
 .footer-bottom {
   width: 100%;
