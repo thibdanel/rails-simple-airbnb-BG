@@ -6,23 +6,25 @@
 
 <div class="container">
   <div class="row">
-      <% @motos.each do |moto| %>
+    <% @motos.each do |moto| %>
       <div class="col-12">
         <div class="card-product mt-3">
-           <%= cl_image_tag(moto.photo.key, height: 300, width: 400, crop: :fill)%>
-            <div class="card-product-infos">
+          <%= cl_image_tag(moto.photo.key, height: 300, width: 400, crop: :fill)%>
+          <div class="card-product-infos">
             <%= link_to moto_path(moto) do %>
-            <h2> <%= moto.name %> </h2>
+              <h2> <%= moto.name %> </h2>
             <% end %>
+
             <p>Power: <%= moto.power %>CC</p>
             <p>Kilometers: <%= moto.kilometers %> Kms</p>
             <p id="card-price">For only <strong><%= moto.price %> €</strong></p>
             </div>
+
           </div>
-          <hr/>
-        <% end %>
-      <%= link_to "Create a moto", new_moto_path, class: "new-moto mt-3"  %>
-      <%= link_to "Home", root_path, class: 'new-moto mt-3' %>
-    </div>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>
+  <%= link_to "Create a moto", new_moto_path, class: "new-moto mt-3"  %>
+  <%= link_to "Home", root_path, class: 'new-moto mt-3' %>
