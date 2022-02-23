@@ -9,7 +9,7 @@
 <div class="container">
   <div class="card-trip mb-3">
     <%= cl_image_tag @moto.photo.key, height: 300, width: 400, crop: :fill%>
-    <div class="card-trip-infos">
+    <div class="card-trip-infos mb-3">
       <div>
         <h2><%= @moto.brand %> </h2>
         <p><%= @moto.power %> Horsepower</p>
@@ -17,16 +17,16 @@
         <p>Location: <%= @moto.address %></p>
       </div>
       <div>
-        <%= link_to "Reserve bike now", new_moto_booking_path(@moto), class: "book" %>
+        <%= link_to "Reserve bike now", new_moto_booking_path(@moto), class: "new-moto" %>
       </div>
       <div>
-        <%= link_to "Delete this Bike", moto_path(@moto), method: :delete, class: "delete" %>
+        <%= link_to "Delete this Bike", moto_path(@moto), method: :delete, class: "new-moto" %>
       </div>
        <div>
-        <%= link_to "Update Bike", edit_moto_path(@moto), class:"update" %>
+        <%= link_to "Update Bike", edit_moto_path(@moto), class: "new-moto" %>
       </div>
 
-      <h2 class="card-trip-pricing"><%= @moto.price %>€</h2>
+      <h3 class="card-trip-pricing"><%= @moto.price %>€</h2>
     </div>
   </div>
   <%= link_to "Back to Motos", motos_path, class: "new-moto mt-3"  %>
