@@ -1,6 +1,6 @@
 
 <div class="Container">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.midilibre.fr/api/v1/images/view/61def9638fe56f5eb81849b6/large/image.jpg?v=1)">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.midilibre.fr/api/v1/images/view/61def9638fe56f5eb81849b6/large/image.jpg?v=1)">
     <div class="container">
      <h1>Hey <%= current_user.first_name %>!</h1>
      <h2>Welcome to your Workshop!</h2>
@@ -8,7 +8,7 @@
   </div>
 </div>
 
-<div class="container mt-5">
+<div class="container mt-3">
   <h2>Booking HISTORY</h2>
   <div class="row">
     <% @bookings.each do |booking| %>
@@ -40,7 +40,7 @@
   <div class="row mt-4">
     <% @motos.take(3).each do |moto| %>
       <div class="col-4">
-        <div class="card-moto">
+        <div class="card-moto mb-4">
           <%= cl_image_tag moto.photo.key, height: 300, width: 400, crop: :fill%>
           <div class="card-moto-info">
             <p> <%= link_to moto.name, moto_path(moto), :class => "name" %> </p>
