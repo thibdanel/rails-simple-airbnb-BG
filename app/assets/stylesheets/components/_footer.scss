@@ -12,7 +12,7 @@ footer {
 }
 
 
-.section-community, .section-about, .section-support
+.section-community, .section-forum, .section-about, .section-support
 {
   font-size: 16px;
   display: inline-block;
@@ -21,18 +21,18 @@ footer {
   box-sizing: border-box;
 }
 
-.section-community h3, .section-about h3, .section-support h3
+.section-community h3, .section-forum h3, .section-about h3, .section-support h3
 {
   padding: 25px 0px;
   font-size: 24px;
 }
 
-.section-community ul, .section-about ul, .section-support ul
+.section-community ul, .section-forum ul, .section-about ul, .section-support ul
 {
   padding-left: 0px;
 }
 
-.section-community ul li, .section-about ul li, .section-support ul li
+.section-community ul li, .section-forum ul li, .section-about ul li, .section-support ul li
 {
   list-style: none;
 }
@@ -58,6 +58,35 @@ footer {
 .section-community li a:hover::after
 {
   width: 6%;
+  transition: width .3s;
+}
+
+// Section : Forum
+
+.section-forum ul
+{
+  padding-left: 0px;
+}
+
+.section-forum li a
+{
+  color: #000000;
+  text-decoration: none;
+}
+
+.section-forum li a::after
+{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000000;
+  transition: width .3s;
+}
+
+.section-forum li a:hover::after
+{
+  width: 28%;
   transition: width .3s;
 }
 
@@ -110,7 +139,7 @@ footer {
 
 .section-support li a:hover::after
 {
-  width: 43%;
+  width: 44%;
   transition: width .3s;
 }
 
