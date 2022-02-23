@@ -8,12 +8,12 @@
   <div class="container mb-3">
     <div class="row">
       <h2> Available Motos</h2>
-      <% @motos.each do |moto| %>
-        <div class="col-12 col-lg-8">
+       <div class="col-12 col-lg-6">
+        <% @motos.each do |moto| %>
           <div class="card-product mb-3">
             <%= cl_image_tag(moto.photo.key, height: 300, width: 400, crop: :fill)%>
             <div class="card-product-infos">
-              <%= link_to moto_path(moto) do %>
+              <%= link_to moto_path(moto), class:"link-without-style" do %>
               <h2> <%= moto.name %> </h2>
               <% end %>
 
@@ -23,9 +23,11 @@
 
             </div>
           </div>
-        </div>
-      <% end %>
-       <div class= "col-12 col-lg-4" style= "height: 600px;"
+
+        <% end %>
+      </div>
+
+       <div id="map" class= "col-12 col-lg-6" style= "height: 800px;"
           data-controller="mapbox"
           data-mapbox-markers-value="<%= @markers.to_json %>"
           data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
