@@ -41,3 +41,17 @@
   width: 50%;
   transition: width .3s;
 }
+
+.nav-item .padding {
+  padding-right: 5px;
+}
+
+.nav-link.active::after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: 2px;
+  background: #000000;
+  transition: width .3s;
+}
