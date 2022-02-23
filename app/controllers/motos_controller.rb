@@ -6,6 +6,15 @@ class MotosController < ApplicationController
 
   def index
     @motos = Moto.all
+
+    @markers = @motos.geocoded.map do |moto|
+      {
+        lat: moto.latitude,
+        lng: moto.longitude,
+        info_window: render_to_string(partial: "infos_window", locals: { moto: moto }),
+        image_url: helpers.asset_url("icone_moto.png")
+      }
+    end
   end
 
   def show
