@@ -9,23 +9,21 @@
 
 <div class="container mt-5">
   <h2>Booking HISTORY</h2>
-  <div class="row mt-4">
-    <% @motos.each do |moto| %>
-      <% moto.bookings.each do |booking| %>
-        <div class="col-4">
-          <div class="card-moto">
-            <div class="card-moto-img">
-              <%= cl_image_tag moto.photo.key, height: 300, width: 400, crop: :fill%>
-              <i class="fas fa-trash"></i>
-              <i class="fas fa-pen"></i>
-            </div>
-            <div class="card-moto-info">
-              <p id="start-date" > <%= booking.start_date %> </p>
-              <p id="end-date" > <%= booking.end_date %> </p>
-            </div>
+  <div class="row">
+    <% @bookings.each do |booking| %>
+      <div class="col-4 mt-5">
+        <div class="card-moto">
+          <div class="card-moto-img">
+            <%= cl_image_tag booking.moto.photo.key, height: 300, width: 400, crop: :fill%>
+            <i class="fas fa-trash"></i>
+            <i class="fas fa-pen"></i>
+          </div>
+          <div class="card-moto-info">
+            <p id="start-date" >From <strong> <%= booking.start_date %> </strong> </p>
+            <p id="end-date" >To <strong> <%= booking.end_date %> </strong>  </p>
           </div>
         </div>
-      <% end %>
+      </div>
     <% end %>
   </div>
 </div>
