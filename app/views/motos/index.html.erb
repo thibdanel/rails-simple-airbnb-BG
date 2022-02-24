@@ -9,7 +9,7 @@
       <h2> Available Motos</h2>
        <div class="col-12 col-lg-6">
         <% @motos.each do |moto| %>
-          <div class="card-product">
+          <div class="card-product mt-3">
             <%= cl_image_tag(moto.photo.key, height: 300, width: 400, crop: :fill)%>
             <div class="card-product-infos">
               <%= link_to moto_path(moto), class:"link-without-style" do %>
