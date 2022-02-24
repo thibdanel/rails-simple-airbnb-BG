@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.moto = @moto
     @booking.user_id = current_user.id
     # @booking.status = "pending"
-    if @booking.save!
+    if @booking.save
       redirect_to profile_path
     else
       render :new
