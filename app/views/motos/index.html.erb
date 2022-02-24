@@ -9,7 +9,7 @@
       <h2> Available Motos</h2>
        <div class="col-12 col-lg-6">
         <% @motos.each do |moto| %>
-          <div class="card-product mt-3">
+          <div class="card-product mb-3">
             <%= cl_image_tag(moto.photo.key, height: 300, width: 400, crop: :fill)%>
             <div class="card-product-infos">
               <%= link_to moto_path(moto), class:"link-without-style" do %>
@@ -26,7 +26,7 @@
         <% end %>
       </div>
 
-       <div id="map" class= "col-12 col-lg-6" style= "height: 750px;"
+       <div id="map" class= "col-12 col-lg-6 mb-3" style= "height: 750px;"
           data-controller="mapbox"
           data-mapbox-markers-value="<%= @markers.to_json %>"
           data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
