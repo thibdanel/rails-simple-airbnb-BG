@@ -37,7 +37,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.status = "declined"
     @booking.save!
-    redirect_to profile_paths
+    redirect_to profile_path
   end
 
   def destroy
