@@ -8,13 +8,15 @@
 </div>
 
 <div class="container mt-3">
-  <h2>Booking HISTORY ON MY BIKE</h2>
+  <h2>Your Booking History</h2>
   <% if @their_bookings.present? %>
     <div class="row">
       <% @their_bookings.each do |booking| %>
         <div class="col-4 mt-5">
           <div class="card-moto">
             <div class="card-moto-img">
+              <p>Revenue: <%= (booking.end_date - booking.start_date).to_i * booking.moto.price %> €</p>
+              <p>for: <%= (booking.end_date - booking.start_date).to_i %> days</p>
               <%= cl_image_tag booking.moto.photo.key, height: 300, width: 400, crop: :fill%>
               <%=  link_to booking_path(booking), method: :delete, data: {confirm: "Are you sure ?"} do %>
                 <i class="fas fa-trash"></i>
@@ -48,13 +50,15 @@
 </div>
 
 <div class="container mt-5">
-  <h2>MY TRIPS Booking HISTORY </h2>
+  <h2>Your Own Trips </h2>
   <% if @my_bookings.present? %>
     <div class="row">
       <% @my_bookings.each do |booking| %>
         <div class="col-4 mt-5">
           <div class="card-moto">
             <div class="card-moto-img">
+              <p>Total cost for your trip: <%= (booking.end_date - booking.start_date).to_i * booking.moto.price %> €</p>
+              <p>for: <%= (booking.end_date - booking.start_date).to_i %> days</p>
               <%= cl_image_tag booking.moto.photo.key, height: 300, width: 400, crop: :fill%>
               <%=  link_to booking_path(booking), method: :delete, data: {confirm: "Are you sure ?"} do %>
                 <i class="fas fa-trash"></i>
