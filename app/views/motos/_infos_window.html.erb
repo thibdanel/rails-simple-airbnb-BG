@@ -1,2 +1,7 @@
-<h2><%= moto.name %></h2>
-<p><%= moto.address %></p>
+<div class="container">
+  <%=link_to moto_path(moto) do%>
+    <h2><%= moto.brand %></h2>
+  <%end%>
+  <h6>location: <%= moto.address %></h6>
+  <h6>Price: <%= moto.price %> € per day</h6>
+</div>
