@@ -8,7 +8,7 @@
 </div>
 
 <div class="container mt-3">
-  <h2>Booking HISTORY ON MY BIKE</h2>
+  <h2>Your Booking History</h2>
   <div class="row">
     <% @their_bookings.each do |booking| %>
       <div class="col-4 mt-5">
@@ -34,8 +34,7 @@
       </div>
     <% end %>
   </div>
-
-  <h2>MY TRIPS Booking HISTORY </h2>
+  <h2>Your Own Trips </h2>
   <% if @my_bookings.present? %>
   <div class="row">
     <% @my_bookings.each do |booking| %>
@@ -85,12 +84,7 @@
     <% end %>
   </div>
 
-  <div class="container">
-    <div class="informations">
-      <h2>Informations Personnelles</h2>
-    </div>
-  </div>
-</div>
+
 
 <div class="container mt-5">
   <h2>My profile</h2>
