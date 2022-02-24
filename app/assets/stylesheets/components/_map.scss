@@ -21,3 +21,12 @@
     position: sticky;
     top: 0;
 }
+
+.deco-notif {
+  text-decoration: none;
+  color: black;
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
