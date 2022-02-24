@@ -28,7 +28,7 @@
             </div>
             <div class="card-moto-info-booking">
 
-              <p>  <%= booking.status %> </p>
+              <p id="status">  <%= booking.status %> </p>
               <p id="start-date">From: <strong> <%= booking.start_date %> </strong> </p>
               <p id="end-date">To: <strong> <%= booking.end_date %> </strong>  </p>
               <p id="revenue">Revenue: <strong> <%= (booking.end_date - booking.start_date).to_i * booking.moto.price %> € </strong> </p>
