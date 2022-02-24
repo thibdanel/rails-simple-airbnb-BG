@@ -36,6 +36,12 @@
     transition: width .3s;
 }
 
+.nav-item .nav-link a:hover
+{
+  color: #000000;
+}
+
+
 .nav-item a:hover::after
 {
   width: 50%;
@@ -45,8 +51,14 @@
 .nav-item .padding {
   padding-right: 5px;
 }
+// nav-item active
 
-.nav-link.active::after {
+.nav-item.active .nav-link {
+  color: #000000;
+
+}
+
+.nav-item.active .nav-link::after {
   content: '';
   display: block;
   margin: 0 auto;
