@@ -12,4 +12,11 @@ class Moto < ApplicationRecord
   validates :kilometers, presence: true
   validates :price, presence: true
   has_one_attached :photo
+
+  include PgSearch::Model
+  pg_search_scope :search_by_brand_and_address,
+    against: [ :brand, :address ],
+    using: {
+      tsearch: { prefix: true }
+    }
 end

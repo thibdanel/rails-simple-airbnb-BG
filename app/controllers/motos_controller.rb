@@ -5,7 +5,11 @@ class MotosController < ApplicationController
   end
 
   def index
-    @motos = Moto.all
+    if params[:query].present?
+      @motos = Moto.search_by_brand_and_address(params[:query])
+    else
+      @motos = Moto.all
+    end
 
     @markers = @motos.geocoded.map do |moto|
       {
