@@ -140,11 +140,9 @@
 .card-moto .name {
   text-decoration: none;
   position: absolute;
-  top: 20px;
+  top: 55px;
   left: 20px;
   color: black;
-  font-size: 24px;
-  font-weight: bold;
 }
 
 .card-moto .name:hover {
@@ -154,9 +152,11 @@
 
 .card-moto #brand {
   position: absolute;
-  top: 55px;
+  top: 20px;
   left: 20px;
   font-size: 18px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .card-moto #address {
@@ -169,6 +169,7 @@
   position: absolute;
   bottom: 20px;
   right: 20px;
+  font-size: 18px;
 }
 
 .card-moto #power {
@@ -181,6 +182,12 @@
   position: absolute;
   top: 55px;
   right: 20px;
+}
+
+.card-moto #username {
+  position: absolute;
+  bottom: 45px;
+  left: 20px;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -254,4 +261,49 @@
 
 #card-price{
   font-size: 16px;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Card : My moto
+
+.card-moto .card-my-moto-img {
+  position: relative;
+  border-radius: 10 10px 0px 0px;
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.card-moto .card-my-moto-img img {
+  border-radius: 10 10px 0px 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+  filter:brightness(100%);
+}
+
+.card-moto .card-my-moto-img:hover img {
+  transition: 0.3s;
+  filter:brightness(60%);
+}
+
+.card-moto .card-my-moto-img:hover i {
+  visibility: visible;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+.nothing-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #a0a0a0;
+  border-radius: 5px;
+  padding: 30px 0px;
+}
+
+.nothing-info p {
+  margin: 0;
 }
