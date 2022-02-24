@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :bookings, only: [ :new, :create ]
   end
   resources :bookings, only: [ :show, :edit, :update, :destroy ]
-  patch 'booking/:id/accept', to: 'booking#accept'
-  patch 'booking/:id/decline', to: 'booking#decline'
+  patch 'booking/:id/accept', to: 'bookings#accept', as: 'accept'
+  patch 'booking/:id/decline', to: 'bookings#decline', as: 'decline'
   get "profile", to: 'dashboards#profile'
 end
