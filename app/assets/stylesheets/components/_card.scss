@@ -245,16 +245,37 @@
   visibility: visible;
 }
 
-.card-moto .card-moto-info #start-date {
-  position: absolute;
-  top: 30px;
-  left: 77.5px;
+.card-moto .card-moto-info-booking {
+  position: relative;
+  height: 20%;
 }
 
-.card-moto .card-moto-info #end-date {
+.card-moto .card-moto-info-booking p {
+  margin: 0;
+}
+
+.card-moto .card-moto-info-booking #start-date {
   position: absolute;
-  top: 30px;
-  right: 77.5px;
+  bottom: 20px;
+  left: 50px;
+}
+
+.card-moto .card-moto-info-booking #end-date {
+  position: absolute;
+  bottom: 20px;
+  left: 250px;
+}
+
+.card-moto .card-moto-info-booking #revenue {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+
+.card-moto .card-moto-info-booking #day {
+  position: absolute;
+  top: 20px;
+  left: 250px;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
