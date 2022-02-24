@@ -18,6 +18,7 @@ class BookingsController < ApplicationController
     @moto = Moto.find(params[:moto_id])
     @booking.moto = @moto
     @booking.user_id = current_user.id
+    # @booking.status = "pending"
     if @booking.save!
       redirect_to profile_path
     else

@@ -19,12 +19,15 @@
       <div>
         <%= link_to "Reserve bike now", new_moto_booking_path(@moto), class: "new-moto" %>
       </div>
-      <div>
-        <%= link_to "Delete this Bike", moto_path(@moto), method: :delete, class: "new-moto" %>
-      </div>
-       <div>
-        <%= link_to "Update Bike", edit_moto_path(@moto), class: "new-moto" %>
-      </div>
+
+      <% if @moto.user_id == current_user.id %>
+        <div>
+          <%= link_to "Delete this Bike", moto_path(@moto), method: :delete, class: "new-moto" %>
+        </div>
+        <div>
+          <%= link_to "Update Bike", edit_moto_path(@moto), class: "new-moto" %>
+        </div>
+      <% end %>
 
       <h3 class="card-trip-pricing"><%= @moto.price %>€</h2>
     </div>
