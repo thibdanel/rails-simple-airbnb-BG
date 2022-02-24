@@ -33,13 +33,13 @@ user1 = User.create(first_name: "Thibault", last_name: "Danel", password: "azert
 user2 = User.create(first_name: "Yassine", last_name: "Allaouna", password: "azerty", email: "yassine@mail.com")
 user3 = User.create(first_name: "Hugo", last_name: "H", password: "azerty", email: "hugo@mail.com")
 
-file1 = URI.open('https://www.simamoto.fr/img/block/1630575345--photo-600-x-4005-1.jpg')
-moto1 = Moto.new(name: "Turbo", brand: "Kawa", address: "paris", power: "800", price: 50, kilometers: 12_000, user: user1)
+file1 = URI.open('https://www.ouestfrance-auto.com/p/yahooto/2073895_644460_1_fde73431e923dea035f7619a70c6e23d07e06f55_w_ouestfranceauto_.jpg')
+moto1 = Moto.new(name: "A1", brand: "Kawazaki", address: "Paris", power: "800", price: 80, kilometers: 12_000, user: user1)
 moto1.photo.attach(io: file1, filename: 'nes.png', content_type: 'image/png')
 moto1.save!
 
-file2 = URI.open('https://cdn-1.motorsport.com/images/amp/0mNQb1q2/s6/dakar-dakar-1989-stephane-peterhansel-yamaha-tener-750-7156519.jpg')
-moto2 = Moto.new(name: "Fusion", brand: "Yam", address: "Lille", power: "1200", price: 85, kilometers: 15_000, user: user1)
+file2 = URI.open('https://www.ouestfrance-auto.com/p/yahooto/8923802_AA086447_01_6e89f7dbb55457026b5cc3983618269f_w_ouestfranceauto_.jpg')
+moto2 = Moto.new(name: "Serie K", brand: "BMW", address: "Lambersart", power: "1200", price: 85, kilometers: 15_000, user: user1)
 moto2.photo.attach(io: file2, filename: 'nes.png', content_type: 'image/png')
 moto2.save!
 
@@ -59,24 +59,33 @@ moto5.photo.attach(io: file5, filename: 'nes.png', content_type: 'image/png')
 moto5.save!
 
 file6 = URI.open('https://www.ouestfrance-auto.com/p/yahooto/2069821_AA110400_1_e672aed5e2f6a7010adedc1ed755ab80fad28195_w_ouestfranceauto_.jpg')
-moto6 = Moto.new(name: "Rebel", brand: "Honda", address: "Lyon", power: "1100", price: 100, kilometers: 12000, user: user3)
+moto6 = Moto.new(name: "Rebel", brand: "Honda", address: "Bron", power: "1100", price: 100, kilometers: 12_000, user: user3)
 moto6.photo.attach(io: file6, filename: 'nes.png', content_type: 'image/png')
 moto6.save!
 
 file7 = URI.open('https://www.ouestfrance-auto.com/p/yahooto/2079256_AA110272_1_94ab22402dade9606e8bb84225cfc5328b49f99f_w_ouestfranceauto_.jpg')
-moto7 = Moto.new(name: "Fat Boy", brand: "Harley Davidson", address: "Lyon", power: "1584", price: 125, kilometers: 31_000, user: user3)
+moto7 = Moto.new(name: "Fat Boy", brand: "Harley Davidson", address: "Villeurbanne", power: "1584", price: 125, kilometers: 31_000, user: user3)
 moto7.photo.attach(io: file7, filename: 'nes.png', content_type: 'image/png')
 moto7.save!
 
 file8 = URI.open('https://www.ouestfrance-auto.com/p/yahooto/2066844_AA110272_1_18bcba63356b3acc506dfd952cf5e88be6765711_w_ouestfranceauto_.jpg')
-moto8 = Moto.new(name: "Tiger", brand: "Triumph", address: "Lyon", power: "1200", price: 85, kilometers: 10_000, user: user3)
+moto8 = Moto.new(name: "Tiger", brand: "Triumph", address: "Grenoble", power: "1200", price: 85, kilometers: 10_000, user: user3)
 moto8.photo.attach(io: file8, filename: 'nes.png', content_type: 'image/png')
 moto8.save!
 
 file9 = URI.open('https://www.ouestfrance-auto.com/p/yahooto/2081731_AA109984_1_3f439c031f6109763f170f0b77ae05ca3aa3bfaf_w_ouestfranceauto_.jpg')
-moto9 = Moto.new(name: "Speed Triple", brand: "Triumph", address: "Lyon", power: "1050", price: 99, kilometers: 11_000, user: user3)
+moto9 = Moto.new(name: "Speed Triple", brand: "Triumph", address: "Saint-Priest", power: "1050", price: 99, kilometers: 11_000, user: user3)
 moto9.photo.attach(io: file9, filename: 'nes.png', content_type: 'image/png')
 moto9.save!
 
+file10 = URI.open('https://www.ouestfrance-auto.com/p/yahooto/M01706_AA086447_01_d3096348cd46888dd379742d10ef9f37_crop_740-555_.jpg')
+moto10 = Moto.new(name: "F-700", brand: "BMW", address: "Marseille", power: "800", price: 75, kilometers: 3200, user: user3)
+moto10.photo.attach(io: file10, filename: 'nes.png', content_type: 'image/png')
+moto10.save!
+
+file11 = URI.open('https://www.ouestfrance-auto.com/p/yahooto/2043366_AA110488_1_becd97c5e69281bcf692bcaad643ca2b924bd6d9_w_ouestfranceauto_.jpg')
+moto11 = Moto.new(name: "H2", brand: "Kawazaki", address: "Toulon", power: "1150", price: 90, kilometers: 10_300, user: user3)
+moto11.photo.attach(io: file11, filename: 'nes.png', content_type: 'image/png')
+moto11.save!
 puts "#{User.count}, users created"
 puts "#{Moto.count}, motos created"

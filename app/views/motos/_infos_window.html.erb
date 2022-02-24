@@ -3,7 +3,7 @@
     <%= link_to moto_path(moto), class: "deco-notif" do %>
       <h2><%= moto.brand %></h2>
     <%end%>
-    <h6><%= moto.address %></h6>
+    <h6><%= moto.address.capitalize %></h6>
     <h6>Price: <%= moto.price %> € / day</h6>
   </div>
 </div>
