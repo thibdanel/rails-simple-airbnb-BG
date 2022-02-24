@@ -4,20 +4,40 @@
   </div>
 </div>
 
+
+
   <div class="container mb-3">
+
+
+
+
+
     <div class="row">
       <h2> Available Motos</h2>
        <div class="col-12 col-lg-6">
+
+
+        <%= form_tag motos_path, method: :get do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a moto"
+        %>
+        <%= submit_tag "Search", class: "new-moto my-3" %>
+        <% end %>
+
+
         <% @motos.each do |moto| %>
           <div class="card-product mb-3">
             <%= cl_image_tag(moto.photo.key, height: 300, width: 400, crop: :fill)%>
             <div class="card-product-infos">
               <%= link_to moto_path(moto), class:"link-without-style" do %>
-              <h2> <%= moto.name %> </h2>
+              <h2> <%= moto.brand %> </h2>
               <% end %>
 
               <p>Power: <%= moto.power %>CC</p>
               <p>Kilometers: <%= moto.kilometers %> Kms</p>
+              <p><strong><%= moto.name %></strong></p>
               <p id="card-price">For only <strong><%= moto.price %> €</strong></p>
 
             </div>
