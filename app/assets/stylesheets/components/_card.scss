@@ -131,6 +131,13 @@
   font-size: 16px;
 }
 
+.card-product .card-product-infos #place{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 14px;
+}
+
 
 
 
@@ -547,4 +554,10 @@
   box-shadow: 5px 15px 30px rgba(0,0,0,0.3);
   border-radius: 10px;
   position: relative;
+}
+
+.card-choice.left {
+  background-image: url("choix-gauche.jpg");
+  background-size: cover;
+  background-position: right;
 }
