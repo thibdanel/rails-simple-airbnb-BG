@@ -59,7 +59,7 @@
     <div class="row">
       <% @my_bookings.each do |booking| %>
         <div class="col-4 mt-4">
-          <div class="card-moto">
+          <div class="card-moto mt-2">
             <div class="card-moto-img-trip">
               <%= cl_image_tag booking.moto.photo.key, height: 300, width: 400, crop: :fill%>
               <%=  link_to booking_path(booking), method: :delete, data: {confirm: "Are you sure ?"} do %>
@@ -106,7 +106,7 @@
   <% if @motos.present? %>
     <div class="row mt-4">
       <% @motos.each do |moto| %>
-        <div class="col-4">
+        <div class="col-4 mt-4">
           <div class="card-moto">
             <div class="card-my-moto-img">
               <%= cl_image_tag moto.photo.key, height: 300, width: 400, crop: :fill %>
