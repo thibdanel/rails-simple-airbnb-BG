@@ -1,4 +1,5 @@
 class Moto < ApplicationRecord
+  has_many :reviews, dependent: :destroy
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
 
@@ -19,4 +20,10 @@ class Moto < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+  def average
+    ratings = self.reviews.map do |review|
+      review.rating.to_f
+    end
+    ratings.sum/ratings.length
+  end
 end

@@ -23,6 +23,7 @@ class MotosController < ApplicationController
 
   def show
     @moto = Moto.find(params[:id])
+    @average_rating = @moto.reviews.average(:rating)
   end
 
   def create
