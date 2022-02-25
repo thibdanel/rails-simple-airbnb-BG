@@ -7,12 +7,12 @@
   </div>
 </div>
 
-<div class="container mt-3">
-  <h2>Your Booking History</h2>
+<div class="container mt-4">
+  <h2>Reservation on your Moto</h2>
   <% if @their_bookings.present? %>
     <div class="row">
       <% @their_bookings.each do |booking| %>
-        <div class="col-4 mt-5">
+        <div class="col-4 mt-4">
           <div class="card-moto">
             <div class="card-moto-img-booking">
               <%= cl_image_tag booking.moto.photo.key, height: 300, width: 400, crop: :fill%>
@@ -43,8 +43,8 @@
       <% end %>
     </div>
   <% else %>
-    <div class="row mt-4">
-      <div class="col-12">
+    <div class="row">
+      <div class="col-12 mt-4">
         <div class="nothing-info">
           <p>You don't have a reservation request yet</p>
         </div>
@@ -53,12 +53,12 @@
   <% end %>
 </div>
 
-<div class="container mt-5">
+<div class="container mt-4">
   <h2>Your Own Trips </h2>
   <% if @my_bookings.present? %>
     <div class="row">
       <% @my_bookings.each do |booking| %>
-        <div class="col-4 mt-5">
+        <div class="col-4 mt-4">
           <div class="card-moto">
             <div class="card-moto-img-trip">
               <%= cl_image_tag booking.moto.photo.key, height: 300, width: 400, crop: :fill%>
@@ -90,8 +90,8 @@
       <% end %>
     </div>
   <% else %>
-    <div class="row mt-4">
-      <div class="col-12">
+    <div class="row">
+      <div class="col-12 mt-4">
         <div class="nothing-info">
           <p>You don't have a booking yet</p>
             <%= link_to "Go to the Garage", motos_path, class: "new-moto mt-3"  %>
@@ -101,7 +101,7 @@
   <% end %>
 </div>
 
-<div class="container mt-5">
+<div class="container mt-4">
   <h2>My Motos</h2>
   <% if @motos.present? %>
     <div class="row mt-4">
@@ -140,7 +140,7 @@
   <% end %>
 </div>
 
-<div class="container mt-5">
+<div class="container mt-4">
   <h2>My profile</h2>
   <%= simple_form_for(@user, url: user_registration_path	) do |f| %>
   <div class="row">

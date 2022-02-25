@@ -10,7 +10,7 @@
     <div class="row">
       <h2> Available Motos</h2>
        <div class="col-12 col-lg-6">
-        <div class="row">
+        <div class="row align-search">
           <div class="col-12 col-lg-8">
             <%= form_tag motos_path, method: :get do %>
             <%= text_field_tag :query,
@@ -24,16 +24,6 @@
             <% end %>
           </div>
         </div>
-
-
-        <%= form_tag motos_path, method: :get do %>
-        <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a moto"
-        %>
-        <%= submit_tag "Search", class: "new-moto my-3" %>
-        <% end %>
 
         <% @motos.each do |moto| %>
           <div class="card-product mb-3">
