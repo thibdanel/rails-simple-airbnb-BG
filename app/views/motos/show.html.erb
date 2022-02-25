@@ -15,9 +15,25 @@
         <p><%= @moto.power %> Horsepower</p>
         <p><%= @moto.kilometers %> Km</p>
         <p>Location: <%= @moto.address %></p>
+        <% if @moto.reviews.count > 0 %>
+          <p>Rating: <%= @average_rating.truncate(1) %>/5 -- <%=@moto.reviews.count%> comments</p>
+          <div class="reviews">
+            <p>
+              <% Review::AUTHORIZED_RATINGS.each do |number| %>
+              <% count = 0 %>
+              <% break if count > 1 %>
+              <i class="fa<%= (number > @average_rating) ? 'r' : 's' %> fa-star"></i>
+              <% count += 1%>
+              <% end %>
+            </p>
+          </div>
+          <% else %>
+            <p>No ratings yet</p>
+          <% end %>
       </div>
       <div>
         <%= link_to "Reserve bike now", new_moto_booking_path(@moto), class: "new-moto" %>
+        <%= link_to "Leave a review", new_moto_review_path(@moto), class: "new-moto" %>
       </div>
 
       <% if @moto.user_id == current_user.id %>
