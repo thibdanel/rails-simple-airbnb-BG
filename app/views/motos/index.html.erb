@@ -47,7 +47,21 @@
               <p>Kilometers: <%= moto.kilometers %> Kms</p>
               <p><strong><%= moto.name %></strong></p>
               <p id="card-price">For only <strong><%= moto.price %> €</strong></p>
-
+              <% if moto.reviews.count > 0 %>
+                <% moto.average.truncate(1) %>
+              <div class="reviews">
+                <p>
+                  <% Review::AUTHORIZED_RATINGS.each do |number| %>
+                  <% count = 0 %>
+                  <% break if count > 1 %>
+                  <i class="fa<%= (number > moto.average.truncate(1)) ? 'r' : 's' %> fa-star"></i>
+                  <% count += 1%>
+                  <% end %>
+                </p>
+              </div>
+              <% else %>
+                <p>No ratings yet</p>
+              <% end %>
             </div>
           </div>
 
