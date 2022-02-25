@@ -14,7 +14,7 @@
         <h2><%= @moto.brand %> </h2>
         <p><%= @moto.power %> Horsepower</p>
         <p><%= @moto.kilometers %> Km</p>
-        <p>Location: <%= @moto.address %></p>
+        <p> <%= @moto.address %></p>
       </div>
       <div>
         <%= link_to "Reserve bike now", new_moto_booking_path(@moto), class: "new-moto" %>

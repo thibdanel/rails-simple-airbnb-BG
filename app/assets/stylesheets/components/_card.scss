@@ -1,3 +1,5 @@
+  // CARD SHOW
+
 .card-trip {
   overflow: hidden;
   background: white;
@@ -10,9 +12,12 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
-
 }
 
+.card-trip img:hover {
+  transition: 0.3s;
+  filter:brightness(60%);
+}
 
 .card-trip h2 {
   font-size: 20px;
@@ -47,6 +52,8 @@
   top: -20px;
   width: 40px;
 }
+// ------------------------------------------------------------------------------------------
+// INDEX CARDS
 
 .card-product {
   overflow: hidden;
@@ -98,7 +105,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-
+// ------------------------------------------------------------------------------------------
 // Card moto : Global
 
 .card-moto {
