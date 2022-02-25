@@ -164,13 +164,20 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
+  font-weight: bold;
+}
+.card-moto #user_name {
+  position: absolute;
+  bottom: 45px;
+  left: 20px;
 }
 
 .card-moto #price {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .card-moto #power {
