@@ -107,3 +107,22 @@
   text-decoration: none;
   color: black;
 }
+
+
+//////////////////////////////////////////////////
+
+// Bouton noir Show
+.new-moto-show {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #272626;
+  color: #FFFFFF;
+  border-radius: 5px;
+  border-color: none;
+  margin-bottom: center;
+}
+
+.new-moto-show:hover {
+  background-color: #000000;
+  color: white;
+}
