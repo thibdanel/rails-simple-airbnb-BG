@@ -1,0 +1,16 @@
+<div class="banner mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.yamaha-motor.eu/content/dam/fr-assets/t%C3%A9n%C3%A9r%C3%A9-700-center/trail-rando/2019_Trail_Rando_Diagonale_Tenere_700_245.jpg/_jcr_content/renditions/cq5dam.web.2000.2000.jpeg);">
+  <div class="container">
+    <h1>Hey <%= current_user.first_name %>!</h1>
+    <h2>Leave a comment !</h2>
+  </div>
+</div>
+
+
+<div class="container">
+  <%= simple_form_for ([ @moto, @review ]) do |f| %>
+    <%= f.input :content %>
+    <%= f.input :rating, collection: Review::AUTHORIZED_RATINGS,
+                        include_blank: false %>
+    <%= f.submit class: "btn btn-primary", value: "Valider" %>
+    <%end %>
+</div>
