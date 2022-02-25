@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
     @moto = Moto.find(params[:moto_id])
     @booking.moto = @moto
     @booking.user_id = current_user.id
-    @booking.status = "pending"
+    @booking.status = "Pending"
     if @booking.save!
       redirect_to profile_path
     else
@@ -28,14 +28,14 @@ class BookingsController < ApplicationController
 
   def accept
     @booking = Booking.find(params[:id])
-    @booking.status = "accepted"
+    @booking.status = "Accepted"
     @booking.save!
     redirect_to profile_path
   end
 
   def decline
     @booking = Booking.find(params[:id])
-    @booking.status = "declined"
+    @booking.status = "Declined"
     @booking.save!
     redirect_to profile_path
   end

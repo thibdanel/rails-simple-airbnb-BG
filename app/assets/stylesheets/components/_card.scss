@@ -1,3 +1,5 @@
+  // CARD SHOW
+
 .card-trip {
   overflow: hidden;
   background: white;
@@ -10,9 +12,12 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
-
 }
 
+.card-trip img:hover {
+  transition: 0.3s;
+  filter:brightness(60%);
+}
 
 .card-trip h2 {
   font-size: 20px;
@@ -47,6 +52,8 @@
   top: -20px;
   width: 40px;
 }
+// ------------------------------------------------------------------------------------------
+// INDEX CARDS
 
 .card-product {
   overflow: hidden;
@@ -98,7 +105,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-
+// ------------------------------------------------------------------------------------------
 // Card moto : Global
 
 .card-moto {
@@ -164,13 +171,20 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
+  font-weight: bold;
+}
+.card-moto #user_name {
+  position: absolute;
+  bottom: 45px;
+  left: 20px;
 }
 
 .card-moto #price {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .card-moto #power {
@@ -212,7 +226,7 @@
   filter:brightness(100%);
 }
 
-.card-moto i {
+.card-moto .card-moto-img i {
   position: absolute;
   visibility: hidden;
   z-index: 2;
@@ -221,18 +235,54 @@
   transform: scale(1);
 }
 
+.card-moto .card-my-moto-img i {
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+  color: #FFFFFF;
+  transition: 0.1s;
+  transform: scale(1);
+}
 
-.card-moto i:hover {
+.card-moto .card-my-moto-img i:hover {
   transition: 0.3s;
   transform: scale(1.25);
 }
 
-.card-moto .fa-trash {
+.card-moto .card-my-moto-img:hover i {
+  visibility: visible;
+}
+
+.card-moto .card-my-moto-img .fa-trash {
   top: 15px;
   right: 15px;
 }
 
-.card-moto .fa-pen {
+.card-moto .card-moto-img-booking i {
+  position: absolute;
+  z-index: 2;
+
+  transition: 0.1s;
+  transform: scale(1);
+}
+
+.card-moto .card-moto-img-booking i:hover {
+  transition: 0.3s;
+  transform: scale(1.25);
+}
+
+
+.card-moto .card-moto-img i:hover {
+  transition: 0.3s;
+  transform: scale(1.25);
+}
+
+.card-moto .card-moto-img .fa-trash {
+  top: 15px;
+  right: 15px;
+}
+
+.card-moto .card-moto-img .fa-pen {
   top: 15px;
   right: 45px;
 }
@@ -279,16 +329,89 @@
   left: 250px;
 }
 
-.card-moto .card-moto-info-booking #status {
+.card-moto .card-moto-img-booking #status {
+  z-index: 2;
   position: absolute;
-  top: 10px;
-  left: 175px;
+  top:  35%;
+  left: 30%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  color: #FFFFFF;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 
 #card-price{
   font-size: 16px;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Card : My trip
+
+.card-moto .card-moto-img-trip {
+  position: relative;
+  border-radius: 10 10px 0px 0px;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.card-moto .card-moto-img-trip img {
+  border-radius: 10 10px 0px 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+  filter:brightness(60%);
+}
+
+.card-moto .card-moto-img-trip .fa-trash {
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+  color: #FFFFFF;
+  transition: 0.1s;
+  transform: scale(1);
+}
+
+.card-moto .card-moto-img-trip .fa-trash {
+  top: 15px;
+  right: 15px;
+}
+
+.card-moto .card-moto-img-trip .fa-trash:hover {
+  transition: 0.3s;
+  transform: scale(1.25);
+}
+
+.card-moto .card-moto-img-trip:hover .fa-trash {
+  visibility: visible;
+}
+
+////
+
+.card-moto .card-moto-img-trip .fa-pen {
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+  color: #FFFFFF;
+  transition: 0.1s;
+  transform: scale(1);
+}
+
+.card-moto .card-moto-img-trip .fa-pen {
+  top: 15px;
+  right: 45px;
+}
+
+.card-moto .card-moto-img-trip .fa-pen:hover {
+  transition: 0.3s;
+  transform: scale(1.25);
+}
+
+.card-moto .card-moto-img-trip:hover .fa-pen {
+  visibility: visible;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -318,6 +441,41 @@
 
 .card-moto .card-my-moto-img:hover i {
   visibility: visible;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+.card-moto .card-moto-img-booking {
+  position: relative;
+  border-radius: 10 10px 0px 0px;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.card-moto .card-moto-img-booking img {
+  border-radius: 10 10px 0px 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+  filter:brightness(60%);
+}
+
+.card-moto .fa-times {
+  top: 50%;
+  right: 40%;
+  font-size: 32px;
+  color: #cf2929;
+}
+
+.card-moto .fa-check {
+  top: 50%;
+  left: 40%;
+  font-size: 32px;
+  color: #5cb85c;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

@@ -14,6 +14,7 @@
         <h2><%= @moto.brand %> </h2>
         <p><%= @moto.power %> Horsepower</p>
         <p><%= @moto.kilometers %> Km</p>
+
         <p>Location: <%= @moto.address %></p>
         <% if @moto.reviews.count > 0 %>
           <p>Rating: <%= @average_rating.truncate(1) %>/5 -- <%=@moto.reviews.count%> comments</p>
@@ -38,10 +39,10 @@
 
       <% if @moto.user_id == current_user.id %>
         <div>
-          <%= link_to "Delete this Bike", moto_path(@moto), method: :delete, class: "new-moto" %>
+          <%= link_to "Delete this Bike", moto_path(@moto), method: :delete, class: "new-moto-show" %>
         </div>
         <div>
-          <%= link_to "Update Bike", edit_moto_path(@moto), class: "new-moto" %>
+          <%= link_to "Update Bike", edit_moto_path(@moto), class: "new-moto-show" %>
         </div>
       <% end %>
 
