@@ -16,16 +16,22 @@
           <div class="card-moto">
             <div class="card-moto-img-booking">
               <%= cl_image_tag booking.moto.photo.key, height: 300, width: 400, crop: :fill%>
-              <%= link_to accept_path(booking), method: :patch, data: {confirm: "Certain d accepter?"} do %>
-                <i class="fas fa-check"></i>
+              <% if booking.status == "Pending" %>
+                <p id="status"> <%= booking.status %> </p>
+                <%= link_to accept_path(booking), method: :patch, data: {confirm: "Certain d accepter?"} do %>
+                  <i class="fas fa-check"></i>
+                <% end %>
+                <%= link_to decline_path(booking), method: :patch, data: {confirm: "Certain de refuser??"} do %>
+                <i class="fas fa-times"></i>
+                <% end %>
+              <% elsif booking.status == "Accepted" %>
+                <p id="status"> You <%= booking.status %> </p>
+              <% elsif booking.status == "Declined" %>
+                <p id="status"> You <%= booking.status %> </p>
               <% end %>
-              <%= link_to decline_path(booking), method: :patch, data: {confirm: "Certain de refuser??"} do %>
-              <i class="fas fa-times"></i>
-              <% end %>
+
             </div>
             <div class="card-moto-info-booking">
-
-              <p id="status"> <%= booking.status %> </p>
               <p id="start-date">From: <strong> <%= booking.start_date %> </strong> </p>
               <p id="end-date">To: <strong> <%= booking.end_date %> </strong>  </p>
               <p id="revenue">Revenue: <strong> <%= (booking.end_date - booking.start_date).to_i * booking.moto.price %> € </strong> </p>
@@ -54,7 +60,7 @@
       <% @my_bookings.each do |booking| %>
         <div class="col-4 mt-5">
           <div class="card-moto">
-            <div class="card-moto-img">
+            <div class="card-moto-img-trip">
               <%= cl_image_tag booking.moto.photo.key, height: 300, width: 400, crop: :fill%>
               <%=  link_to booking_path(booking), method: :delete, data: {confirm: "Are you sure ?"} do %>
                 <i class="fas fa-trash"></i>
@@ -62,6 +68,15 @@
               <%= link_to edit_booking_path(booking) do %>
                 <i class="fas fa-pen"></i>
               <% end %>
+
+              <% if booking.status == "Accepted" %>
+                <div class="loop validate"></div>
+              <% elsif booking.status == "Declined" %>
+                <div class="loop decline"></div>
+              <% elsif booking.status == "Pending" %>
+                <div class="loop"></div>
+              <% end %>
+
 
             </div>
             <div class="card-moto-info-booking">
