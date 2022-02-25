@@ -8,7 +8,7 @@
   <div class="row mt-4">
     <% @motos.take(3).each do |moto| %>
       <div class="col-4">
-        <div class="card-moto">
+        <div class="card-moto mb-3">
           <%= cl_image_tag moto.photo.key, height: 300, width: 400, crop: :fill%>
           <div class="card-moto-info">
             <p> <%= link_to moto.name, moto_path(moto), :class => "name" %> </p>
