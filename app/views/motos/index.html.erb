@@ -37,6 +37,7 @@
               <p id="kilometers">Kilometers: <%= moto.kilometers %> Kms</p>
               <p id="name"><strong><%= moto.name %></strong></p>
               <p id="card-price">For only <strong><%= moto.price %> €</strong></p>
+              <p id="place"><strong><%= moto.address %></strong></p>
               <% if moto.reviews.count > 0 %>
                 <% moto.average.truncate(1) %>
               <div class="reviews">
