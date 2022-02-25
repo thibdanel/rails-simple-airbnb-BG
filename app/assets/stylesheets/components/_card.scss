@@ -212,7 +212,7 @@
   filter:brightness(100%);
 }
 
-.card-moto i {
+.card-moto .card-moto-img i {
   position: absolute;
   visibility: hidden;
   z-index: 2;
@@ -221,18 +221,54 @@
   transform: scale(1);
 }
 
+.card-moto .card-my-moto-img i {
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+  color: #FFFFFF;
+  transition: 0.1s;
+  transform: scale(1);
+}
 
-.card-moto i:hover {
+.card-moto .card-my-moto-img i:hover {
   transition: 0.3s;
   transform: scale(1.25);
 }
 
-.card-moto .fa-trash {
+.card-moto .card-my-moto-img:hover i {
+  visibility: visible;
+}
+
+.card-moto .card-my-moto-img .fa-trash {
   top: 15px;
   right: 15px;
 }
 
-.card-moto .fa-pen {
+.card-moto .card-moto-img-booking i {
+  position: absolute;
+  z-index: 2;
+
+  transition: 0.1s;
+  transform: scale(1);
+}
+
+.card-moto .card-moto-img-booking i:hover {
+  transition: 0.3s;
+  transform: scale(1.25);
+}
+
+
+.card-moto .card-moto-img i:hover {
+  transition: 0.3s;
+  transform: scale(1.25);
+}
+
+.card-moto .card-moto-img .fa-trash {
+  top: 15px;
+  right: 15px;
+}
+
+.card-moto .card-moto-img .fa-pen {
   top: 15px;
   right: 45px;
 }
@@ -318,6 +354,41 @@
 
 .card-moto .card-my-moto-img:hover i {
   visibility: visible;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+.card-moto .card-moto-img-booking {
+  position: relative;
+  border-radius: 10 10px 0px 0px;
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+.card-moto .card-moto-img-booking img {
+  border-radius: 10 10px 0px 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+  filter:brightness(60%);
+}
+
+.card-moto .fa-times {
+  top: 50%;
+  right: 40%;
+  font-size: 32px;
+  color: #cf2929;
+}
+
+.card-moto .fa-check {
+  top: 50%;
+  left: 40%;
+  font-size: 32px;
+  color: #5cb85c;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
