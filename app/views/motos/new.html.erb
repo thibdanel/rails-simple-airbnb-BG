@@ -7,8 +7,14 @@
 <div class="container">
   <h1> Create your Moto</h1>
   <%= simple_form_for(@moto) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :brand %>
+  <div class="row">
+    <div class="col-6">
+      <%= f.input :name %>
+    </div>
+    <div class="col-6">
+      <%= f.input :brand %>
+    </div>
+  </div>
   <%= f.input :address,
               input_html: { data: { geocoder_target: "address" }, class: "d-none"  },
               wrapper_html: { data: { controller: "geocoder",
