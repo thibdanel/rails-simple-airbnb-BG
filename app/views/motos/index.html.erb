@@ -11,7 +11,7 @@
       <h2> Available Motos</h2>
        <div class="col-12 col-lg-6">
         <div class="row align-search">
-          <div class="col-12 col-lg-8">
+          <div class="col-12 col-lg-9">
             <%= form_tag motos_path, method: :get do %>
             <%= text_field_tag :query,
             params[:query],
@@ -19,7 +19,7 @@
             placeholder: "Find a moto"
             %>
           </div>
-          <div class="col-12 col-lg-4">
+          <div class="col-12 col-lg-3">
             <%= submit_tag "Search", class: "new-moto my-3" %>
             <% end %>
           </div>
