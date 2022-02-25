@@ -143,8 +143,14 @@
 <div class="container mt-5">
   <h2>My profile</h2>
   <%= simple_form_for(@user, url: user_registration_path	) do |f| %>
-    <%= f.input :first_name %>
-    <%= f.input :last_name %>
+  <div class="row">
+    <div class="col-6">
+      <%= f.input :first_name %>
+    </div>
+    <div class="col-6">
+      <%= f.input :last_name %>
+    </div>
+  </div>
     <%= f.input :email %>
     <%= f.input :photo, as: :file %>
     <%= f.submit "Update my profile", class: "new-moto mb-3" %>
